@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Card } from 'primereact/card'
 import { InputText } from 'primereact/inputtext'
-import { Textarea } from 'primereact/textarea'
+import { InputTextarea } from 'primereact/inputtextarea'
 import { Toast } from 'primereact/toast'
 import { useRef } from 'react'
 import Container from '@/components/layout/Container'
@@ -126,10 +126,10 @@ export default function ContactPage() {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
-                  <Textarea
+                  <InputTextarea
                     id="message"
                     value={formData.message}
-                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleInputChange('message', e.target.value)}
                     className={`w-full ${validation.message ? 'p-invalid' : ''}`}
                     rows={5}
                     placeholder="Tell us about your procurement needs..."
