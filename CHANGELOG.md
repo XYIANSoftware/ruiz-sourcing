@@ -499,3 +499,9 @@ platform={SocialPlatform.LINKEDIN}
 ### Changed
 
 - **Open Graph/Twitter**: Reverted preview image to `juan-avatar.png`, set OG `type: profile`, and added Twitter `site`/`creator` to encourage platforms to display the description beneath the title.
+
+## [0.8.12] - 2025-08-17
+
+### Changed
+
+- **Domain**: Updated base URL to `https://juanruiz.work` and added canonical URL for SEO.
