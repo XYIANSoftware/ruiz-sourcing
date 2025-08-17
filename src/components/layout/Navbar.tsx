@@ -117,8 +117,8 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Desktop Navigation */}
-      <div className="sticky top-0 z-40">
+      {/* Desktop Navigation - Hidden on Mobile */}
+      <div className="hidden md:block sticky top-0 z-40">
         <Menubar
           model={items}
           start={start}
