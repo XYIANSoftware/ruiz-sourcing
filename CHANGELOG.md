@@ -275,4 +275,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Text shadows**: Varying shadow intensities for different text hierarchy levels
 
 ### Author
+- Kyle Dilbeck
+
+## [0.8.0] - 2024-12-19
+
+### Added
+- **Mobile-responsive header** with proper PrimeReact Sidebar navigation
+- **Beer stein icon** for mobile menu toggle (pi pi-beer)
+- **Right-side mobile sidebar** with themed navigation and footer blurb
+- **Mobile-specific navigation items** with proper active state styling
+
+### Refactored
+- **Mobile header**: Replaced basic hamburger with beer stein icon button
+- **Navigation structure**: Added mobile menu state management with useState
+- **Sidebar implementation**: Used PrimeReact Sidebar component for mobile navigation
+- **Mobile menu items**: Restructured for proper mobile navigation flow
+
+### Visual Enhancements
+- **Beer stein icon**: Professional amber-themed button with subtle background and border
+- **Mobile sidebar**: Right-side slide-out with themed styling and backdrop blur
+- **Navigation buttons**: Full-width mobile buttons with proper active state indicators
+- **Footer section**: Company branding with briefcase icon and professional description
+
+### Technical Improvements
+- **Responsive design**: Proper mobile/desktop header behavior
+- **State management**: Mobile menu visibility controlled with React state
+- **PrimeReact integration**: Proper use of Sidebar component for mobile navigation
+- **Accessibility**: Mobile navigation properly integrated with routing system
+
+### Mobile Features
+- **Beer stein toggle**: Amber-themed button positioned in top-right corner
+- **Right-side sidebar**: Slides in from right with themed styling
+- **Full navigation**: All pages accessible from mobile menu
+- **Professional footer**: Company branding and description in sidebar footer
+- **Active states**: Current page highlighted in mobile navigation
+
+### Author
 - Kyle Dilbeck 
