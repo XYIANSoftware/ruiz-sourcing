@@ -404,3 +404,11 @@ platform={SocialPlatform.LINKEDIN}
 
 ### Notes
 - No theme, color, or component visual changes. Only background-attachment behavior adjusted for mobile compatibility. 
+
+## [0.8.9] - 2024-12-19
+
+### Changed
+- **Global buttons (PRIMARY/SECONDARY)**: Made gradients 50% transparent with hover at ~60% to allow background to show through while maintaining readability. OUTLINE variant now uses a subtle 20% amber hover fill.
+
+### Impact
+- Homepage CTA and all usages of the custom `Button` now have a semi-transparent look consistent with the glassmorphism theme. 

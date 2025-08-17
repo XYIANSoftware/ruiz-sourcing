@@ -18,9 +18,9 @@ export default function Button({
   const getVariantClasses = () => {
     switch (variant) {
       case ButtonVariant.PRIMARY:
-        return 'text-blue-900 font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 focus:ring-amber-500 hover:brightness-105'
+        return 'bg-gradient-to-r from-amber-500/50 to-amber-600/50 hover:from-amber-600/60 hover:to-amber-700/60 text-blue-900 font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 focus:ring-amber-500'
       case ButtonVariant.SECONDARY:
-        return 'bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-blue-900 font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 focus:ring-gray-500'
+        return 'bg-gradient-to-r from-gray-600/50 to-gray-700/50 hover:from-gray-700/60 hover:to-gray-800/60 text-blue-900 font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 focus:ring-gray-500'
       case ButtonVariant.OUTLINE:
         return 'bg-transparent border-2 border-amber-500 text-blue-900 hover:bg-amber-500/20 hover:text-blue-900 font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 focus:ring-amber-500'
       default:
