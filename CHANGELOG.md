@@ -240,4 +240,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Professional appearance**: Leveraging PrimeReact's polished component design
 
 ### Author
+- Kyle Dilbeck
+
+## [0.7.0] - 2024-12-19
+
+### Added
+- **Proper background opacity** for all cards and panels (close to transparent backgrounds)
+- **Enhanced hero image styling** with softer corners, borders, and elevation
+- **Fancy text styling for Juan's name** with complex gradient, glow effects, and shadows
+- **Text shadow effects** throughout for better readability against transparent backgrounds
+
+### Refactored
+- **Background transparency**: All components now use `rgba(17, 24, 39, 0.15)` for near-transparent backgrounds
+- **Hero section spacing**: Reduced gap between image and title from `mb-4` to `mb-2`
+- **Text visibility**: All text now uses proper contrast colors and shadows for readability
+- **Component styling**: Consistent opacity and backdrop blur across all cards
+
+### Visual Enhancements
+- **Juan's name prominence**: Now the fanciest text with complex gradient, glow, and shadow effects
+- **Background transparency**: Parallax background now clearly visible through all components
+- **Enhanced image styling**: Hero image with rounded corners, subtle borders, and elevation shadows
+- **Professional appearance**: Maintained readability while achieving desired transparency
+
+### Technical Improvements
+- **Proper opacity implementation**: Backgrounds are now close to transparent as requested
+- **Text shadow system**: Consistent shadow effects for all text elements
+- **Backdrop blur**: Enhanced glass effect with `backdrop-filter: blur(20px)`
+- **Border styling**: Subtle amber borders with proper transparency
+
+### Styling Details
+- **Hero card**: `rgba(17, 24, 39, 0.1)` - very transparent for main content
+- **Info cards**: `rgba(17, 24, 39, 0.15)` - slightly more opaque for content areas
+- **Juan's name**: Complex gradient with glow effects and multiple shadows
+- **Text shadows**: Varying shadow intensities for different text hierarchy levels
+
+### Author
 - Kyle Dilbeck 

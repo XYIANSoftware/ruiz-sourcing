@@ -45,44 +45,67 @@ export default function HeroSection({
   return (
     <div className={`min-h-screen flex items-center justify-center px-4 py-16 ${className}`}>
       <div className="max-w-6xl w-full text-center">
-        <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+        <Card 
+          className="shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2"
+          style={{
+            background: 'rgba(17, 24, 39, 0.1)',
+            backdropFilter: 'blur(20px)',
+            border: '1px solid rgba(245, 158, 11, 0.3)',
+            borderRadius: '24px'
+          }}
+        >
           
           {/* Hero Image */}
           {heroImage && (
-            <div className="mb-4 animate-fade-in">
+            <div className="mb-2 animate-fade-in">
               <Image 
                 src={heroImage} 
                 alt={heroImageAlt}
                 width={300}
                 height={300}
-                className="mx-auto rounded-2xl shadow-2xl"
+                className="mx-auto rounded-3xl shadow-2xl"
                 priority
+                style={{
+                  border: '2px solid rgba(245, 158, 11, 0.2)',
+                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+                }}
               />
             </div>
           )}
           
-          {/* Hero Title */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent animate-fade-in">
+          {/* Hero Title - Juan's Name - Fanciest and Most Prominent */}
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-6 animate-fade-in"
+              style={{
+                background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #f59e0b 75%, #fbbf24 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                textShadow: '0 0 30px rgba(245, 158, 11, 0.3)',
+                filter: 'drop-shadow(0 0 20px rgba(245, 158, 11, 0.2))'
+              }}>
             {title}
           </h1>
           
           {/* Hero Subtitle */}
           {subtitle && (
-            <h2 className="text-2xl md:text-3xl lg:text-4xl text-amber-400 font-bold mb-4 animate-fade-in animation-delay-200">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-amber-300 font-bold mb-4 animate-fade-in animation-delay-200"
+                style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
               {subtitle}
             </h2>
           )}
           
           {/* Company */}
           {showCompany && company && (
-            <p className="text-xl md:text-2xl text-amber-300 font-medium mb-8 animate-fade-in animation-delay-400">
+            <p className="text-xl md:text-2xl text-amber-200 font-medium mb-8 animate-fade-in animation-delay-400"
+               style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
               at {company}
             </p>
           )}
           
           {/* Description */}
           {showDescription && description && (
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in animation-delay-600">
+            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in animation-delay-600"
+               style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
               {description}
             </p>
           )}

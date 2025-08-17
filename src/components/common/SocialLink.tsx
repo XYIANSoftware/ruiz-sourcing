@@ -88,14 +88,24 @@ export default function SocialLink({
   return (
     <Card 
       className={`text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in ${className}`}
+      style={{
+        background: 'rgba(17, 24, 39, 0.15)',
+        backdropFilter: 'blur(20px)',
+        border: '1px solid rgba(245, 158, 11, 0.2)',
+        borderRadius: '16px'
+      }}
     >
       <div className={`w-18 h-18 bg-gradient-to-r ${getPlatformColors()} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
         <i className={`${getPlatformIcon()} text-2xl text-white`}></i>
       </div>
       
-      <h3 className="text-2xl font-bold text-amber-400 mb-4">{label}</h3>
+      <h3 className="text-2xl font-bold text-amber-300 mb-4"
+          style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
+        {label}
+      </h3>
       
-      <p className="text-gray-300 mb-6 leading-relaxed">
+      <p className="text-gray-100 mb-6 leading-relaxed"
+         style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)' }}>
         {description}
       </p>
       

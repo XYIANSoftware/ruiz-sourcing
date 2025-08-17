@@ -68,8 +68,17 @@ export default function AboutPage() {
         </div>
         
         {/* Highlights Section */}
-        <Card className="text-center animate-fade-in animation-delay-600">
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-300 mb-12">
+        <Card 
+          className="text-center animate-fade-in animation-delay-600"
+          style={{
+            background: 'rgba(17, 24, 39, 0.15)',
+            backdropFilter: 'blur(20px)',
+            border: '1px solid rgba(245, 158, 11, 0.2)',
+            borderRadius: '24px'
+          }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-300 mb-12"
+              style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Product Highlights & Expertise
           </h2>
           

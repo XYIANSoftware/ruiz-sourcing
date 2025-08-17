@@ -58,11 +58,21 @@ export default function ContactPage() {
         </div>
         
         {/* Contact Info */}
-        <Card className="text-center animate-fade-in animation-delay-700">
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-300 mb-8">
+        <Card 
+          className="text-center animate-fade-in animation-delay-700"
+          style={{
+            background: 'rgba(17, 24, 39, 0.15)',
+            backdropFilter: 'blur(20px)',
+            border: '1px solid rgba(245, 158, 11, 0.2)',
+            borderRadius: '24px'
+          }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-300 mb-8"
+              style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Ready to Collaborate?
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed"
+             style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)' }}>
             I&apos;m always interested in exploring new opportunities and building meaningful partnerships. 
             Whether you have a specific project in mind or just want to discuss the industry landscape, 
             I&apos;d love to hear from you. Let&apos;s create something amazing together.
