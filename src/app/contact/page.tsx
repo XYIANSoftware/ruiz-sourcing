@@ -82,17 +82,18 @@ export default function ContactPage() {
         </div>
         
         {/* Contact Info */}
-        <div className="py-12">
+        <div className="py-12" style={{paddingTop:'2rem'}}>
           <Card 
             className="text-center animate-fade-in-up animation-delay-700"
             style={{
               background: 'rgba(17, 24, 39, 0.15)',
               backdropFilter: 'blur(20px)',
               border: '1px solid rgba(245, 158, 11, 0.2)',
-              borderRadius: '24px'
+              borderRadius: '24px',
+              
             }}
           >
-            <div className="p-8">
+            <div >
               <h2 className="text-3xl md:text-4xl font-bold text-amber-300 2"
                   style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
                 Ready to Collaborate?
