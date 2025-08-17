@@ -17,7 +17,7 @@ export default function InfoCard({
 }: InfoCardProps) {
   return (
     <Card 
-      className={`bg-gray-800/90 backdrop-blur-xl border border-amber-500/20 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in ${animationDelay} ${className}`}
+      className={`bg-gray-800/50 backdrop-blur-xl border border-amber-500/20 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in ${animationDelay} ${className}`}
     >
       <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
         <i className={`${icon} text-2xl text-white`}></i>

@@ -1,6 +1,7 @@
 import { Card } from 'primereact/card'
 import { Button } from '@/components/common'
 import { ButtonVariant, ButtonSize } from '@/types'
+import Image from 'next/image'
 
 interface HeroSectionProps {
   title: string
@@ -14,6 +15,8 @@ interface HeroSectionProps {
   showCompany?: boolean
   showDescription?: boolean
   showCta?: boolean
+  heroImage?: string
+  heroImageAlt?: string
 }
 
 export default function HeroSection({
@@ -27,7 +30,9 @@ export default function HeroSection({
   className = '',
   showCompany = true,
   showDescription = true,
-  showCta = true
+  showCta = true,
+  heroImage,
+  heroImageAlt = 'Hero Image'
 }: HeroSectionProps) {
   const handleCtaClick = () => {
     if (onCtaClick) {
@@ -40,7 +45,21 @@ export default function HeroSection({
   return (
     <div className={`min-h-screen flex items-center justify-center px-4 py-16 ${className}`}>
       <div className="max-w-6xl w-full text-center">
-        <Card className="bg-gray-800/90 backdrop-blur-xl border border-amber-500/20 rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+        <Card className="bg-gray-800/50 backdrop-blur-xl border border-amber-500/20 rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+          
+          {/* Hero Image */}
+          {heroImage && (
+            <div className="mb-8 animate-fade-in">
+              <Image 
+                src={heroImage} 
+                alt={heroImageAlt}
+                width={200}
+                height={200}
+                className="mx-auto rounded-2xl shadow-2xl"
+                priority
+              />
+            </div>
+          )}
           
           {/* Hero Title */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent animate-fade-in">

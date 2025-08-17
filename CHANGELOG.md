@@ -170,4 +170,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Easier maintenance**: Less custom CSS to maintain
 
 ### Author
+- Kyle Dilbeck
+
+## [0.5.0] - 2024-12-19
+
+### Added
+- **Enhanced parallax visibility** with reduced background opacity (50% instead of 90%)
+- **Hero image support** above the title text using Next.js Image component
+- **Improved background transparency** across all main wrapper components
+- **Better parallax background showcase** allowing the custom background to shine through
+
+### Refactored
+- **Background opacity**: All card backgrounds changed from `bg-gray-800/90` to `bg-gray-800/50`
+- **HeroSection component**: Added optional hero image support with proper image optimization
+- **About page**: Removed lemonade reference for confidentiality
+- **Constants**: Updated hero description to remove specific product mentions
+- **Contact page**: Applied reduced opacity to contact info section
+
+### Content Updates
+- **Lemonade reference removed**: Updated to generic "expanding our beverage portfolio" for confidentiality
+- **Hero description**: Changed from specific product mention to general procurement excellence
+- **Innovation focus**: Updated to be more generic while maintaining professional tone
+
+### Technical Improvements
+- **Next.js Image optimization**: Hero images now use proper Next.js Image component
+- **Better performance**: Optimized image loading with priority and proper dimensions
+- **Enhanced visual appeal**: Parallax background now clearly visible through all components
+- **Consistent transparency**: All main components now have 50% opacity for better background visibility
+
+### Visual Enhancements
+- **Parallax background**: Now clearly visible through all component backgrounds
+- **Hero image**: Professional image display above the main title
+- **Better contrast**: Maintained readability while showcasing background
+- **Enhanced depth**: Components now have a more layered, professional appearance
+
+### Author
 - Kyle Dilbeck 

@@ -26,7 +26,7 @@ export const HERO_CONTENT = {
   title: 'Juan Ruiz',
   subtitle: 'Procurement Manager',
   company: 'Happy Dad Hard Seltzer & Tea',
-  description: 'Overseeing product lines like the upcoming lemonade release',
+  description: 'Overseeing product lines and driving procurement excellence in the beverage industry',
   ctaText: 'Get In Touch',
   ctaUrl: '/contact',
 } 

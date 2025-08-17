@@ -57,7 +57,7 @@ export default function ContactPage() {
         </div>
         
         {/* Contact Info */}
-        <div className="bg-gray-800/90 backdrop-blur-xl border border-amber-500/20 rounded-3xl p-8 md:p-12 text-center animate-fade-in animation-delay-700">
+        <div className="bg-gray-800/50 backdrop-blur-xl border border-amber-500/20 rounded-3xl p-8 md:p-12 text-center animate-fade-in animation-delay-700">
           <h2 className="text-3xl md:text-4xl font-bold text-amber-300 mb-8">
             Ready to Collaborate?
           </h2>
