@@ -89,7 +89,7 @@ export default function HeroSection({
           
           {/* Hero Subtitle */}
           {subtitle && (
-            <h2 className="text-2xl md:text-3xl lg:text-4xl text-amber-300 font-bold mb-4 animate-fade-in animation-delay-200"
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-amber-300 font-bold m-0  animate-fade-in animation-delay-200"
                 style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
               {subtitle}
             </h2>
@@ -97,7 +97,7 @@ export default function HeroSection({
           
           {/* Company */}
           {showCompany && company && (
-            <p className="text-xl md:text-2xl text-amber-200 font-medium mb-8 animate-fade-in animation-delay-400"
+            <p className="text-xl md:text-2xl text-amber-200 animate-fade-in animation-delay-400"
                style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
               at {company}
             </p>

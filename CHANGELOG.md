@@ -396,6 +396,9 @@ platform={SocialPlatform.LINKEDIN}
 
 ## [0.8.8] - 2024-12-19
 
+### Tweaked
+- **Button PRIMARY**: Increased background opacity to 0.98 and ensured dark-blue text is enforced for better contrast.
+
 ### Fixed
 - **Parallax background not visible on mobile/iOS**: Added mobile and iOS-specific fallbacks to use `background-attachment: scroll` so the background image reliably renders on mobile devices.
 

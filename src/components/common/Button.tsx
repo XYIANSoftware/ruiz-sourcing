@@ -48,9 +48,9 @@ export default function Button({
   let inlineStyle: React.CSSProperties | undefined
   if (variant === ButtonVariant.PRIMARY) {
     inlineStyle = {
-      background: 'rgba(217, 119, 6, 0.9)', // amber-600 with transparency
+      background: 'rgba(217, 119, 6, 0.98)', // higher opacity amber-600
       color: '#0a2540', // dark blue text
-      borderColor: 'rgba(217, 119, 6, 0.95)'
+      borderColor: 'rgba(217, 119, 6, 1)'
     }
   }
 

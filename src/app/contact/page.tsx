@@ -41,7 +41,7 @@ export default function ContactPage() {
         
         {/* Contact Hero Image */}
         <div className="text-center animate-fade-in-up">
-          <div className="w-48 h-48 mx-auto mb-8">
+          <div className="w-48 h-48 mx-auto mb-2">
             <Image
               src="/main-icon.png"
               alt="Contact Icon"
