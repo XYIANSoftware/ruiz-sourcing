@@ -81,23 +81,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Home page**: Now uses reusable `HeroSection` component
 - **About page**: Refactored to use `PageHeader`, `InfoCard`, and `HighlightItem` components
 - **Contact page**: Refactored to use `PageHeader`, `WelcomeSection`, and `SocialLink` components
-- **Navbar**: Updated mobile menu with beverage-themed beer stein icon
-- **Layout**: Integrated parallax background with your custom image
-
-### Component Benefits
-- **Single source of truth**: Changes to components automatically apply everywhere
-- **Consistent styling**: All instances maintain the same look and feel
-- **Easy maintenance**: Update one component, update everywhere
-- **Type safety**: Full TypeScript support with proper interfaces
-- **Reusability**: Components can be used across different pages and contexts
-- **Scalability**: Easy to add new features and variations
+- **Component architecture**: Moved from page-specific to reusable component-based approach
+- **Import structure**: Implemented barrel exports for cleaner imports
 
 ### Technical Improvements
-- **Cleaner page code**: Pages are now much more readable and maintainable
-- **Better separation of concerns**: UI logic separated from page logic
-- **Enhanced barrel exports**: All components properly exported for easy imports
-- **Improved maintainability**: Future changes require minimal code updates
-- **Professional architecture**: Following React best practices for enterprise applications
+- **Component reusability**: All components now accept props for customization
+- **Type safety**: Proper TypeScript interfaces for all component props
+- **Animation system**: Staggered fade-in effects with configurable delays
+- **Code organization**: Better separation of concerns and maintainability
+- **Performance**: Reduced code duplication and improved reusability
+
+### Visual Enhancements
+- **Consistent animations**: All components use the same animation system
+- **Professional appearance**: Components look polished and cohesive
+- **Better user experience**: Smooth, engaging interactions throughout
+- **Responsive design**: All components adapt to different screen sizes
 
 ### Author
 - Kyle Dilbeck
@@ -105,35 +103,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.0] - 2024-12-19
 
 ### Added
-- **Enum-based constants** to replace all magic strings for type safety and maintainability
-- **Type-safe enums** for:
-  - `SocialPlatform`: LinkedIn, Instagram, Email, Twitter, Facebook, YouTube
-  - `ButtonVariant`: Primary, Secondary, Outline
-  - `ButtonSize`: Small, Medium, Large
-  - `AnimationDelay`: None, Delay_200, Delay_400, Delay_500, Delay_600, Delay_700, Delay_800
-- **Enhanced TypeScript interfaces** with proper enum usage
-- **Improved type safety** across all components
+- **Enum-based constants** replacing magic strings for type safety and maintainability
+- **SocialPlatform enum** for social media platform identification
+- **ButtonVariant enum** for button styling variants
+- **ButtonSize enum** for button sizing options
+- **AnimationDelay enum** for staggered animation timing
+- **Enhanced type safety** throughout the application
 
 ### Refactored
-- **SocialLink component**: Now uses `SocialPlatform` enum instead of magic strings
-- **Button component**: Now uses `ButtonVariant` and `ButtonSize` enums
-- **Contact page**: Updated to use `SocialPlatform` and `AnimationDelay` enums
-- **About page**: Updated to use `AnimationDelay` enum for consistent animations
-- **Type definitions**: Centralized all enums in `src/types/index.ts`
+- **Magic string elimination**: Replaced all hardcoded strings with enum values
+- **Component props**: Updated to use enum-based constants
+- **Type definitions**: Enhanced with proper enum usage
+- **Code quality**: Improved maintainability and reduced runtime errors
 
-### Code Quality Improvements
-- **Eliminated magic strings**: All string constants now use proper enums
-- **Better IntelliSense**: IDE autocomplete now shows valid enum values
-- **Type safety**: Compile-time checking prevents invalid string values
-- **Maintainability**: Adding new platforms/variants only requires enum updates
-- **Professional standards**: Following enterprise-level TypeScript best practices
+### Technical Improvements
+- **Type safety**: Enums prevent invalid values and improve IntelliSense
+- **Maintainability**: Centralized constants make updates easier
+- **Code quality**: Eliminated magic strings for better code standards
+- **Developer experience**: Better autocomplete and error detection
 
-### Benefits of Enum Usage
-- **No more typos**: TypeScript catches invalid values at compile time
-- **Easy refactoring**: Rename enum values in one place
-- **Better documentation**: Enums serve as living documentation
-- **IDE support**: Full autocomplete and error checking
-- **Future-proof**: Easy to extend with new values
+### Examples of Enum Usage
+```typescript
+// Before: Magic strings
+variant="primary"
+platform="linkedin"
+
+// After: Enum-based
+variant={ButtonVariant.PRIMARY}
+platform={SocialPlatform.LINKEDIN}
+```
 
 ### Author
 - Kyle Dilbeck
@@ -309,6 +307,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Full navigation**: All pages accessible from mobile menu
 - **Professional footer**: Company branding and description in sidebar footer
 - **Active states**: Current page highlighted in mobile navigation
+
+### Author
+- Kyle Dilbeck
+
+## [0.8.1] - 2024-12-19
+
+### Added
+- **Enhanced mobile menu button positioning** with proper sticky top-right placement
+- **Improved button spacing** with 2rem margins and 1rem padding
+- **Enhanced shadow effects** for better button visibility
+
+### Refactored
+- **Button positioning**: Changed from `absolute` to `fixed` for proper sticky behavior
+- **Spacing system**: Implemented proper margins (`m-8`) and padding (`p-4`)
+- **Visual hierarchy**: Enhanced shadow for better button prominence
+
+### Technical Improvements
+- **Sticky positioning**: Button now stays in place while scrolling
+- **Proper spacing**: Consistent margins and padding for professional appearance
+- **Enhanced visibility**: Better shadow effects for improved button recognition
+
+### Author
+- Kyle Dilbeck
+
+## [0.8.2] - 2024-12-19
+
+### Added
+- **New hero avatar image** using `juan-avatar.png` for personal branding
+- **Enhanced personal connection** with Juan's actual photo/avatar
+
+### Refactored
+- **Hero image source**: Changed from generic `main-icon.png` to personal `juan-avatar.png`
+- **Image alt text**: Updated to reflect personal avatar usage
+
+### Visual Enhancements
+- **Personal branding**: Juan's photo now prominently displayed above the title
+- **Professional appearance**: More engaging and credible hero section
+- **Better user connection**: Visitors can see who they're working with
+
+### Technical Details
+- **Next.js Image optimization**: Maintained for optimal performance
+- **Priority loading**: Avatar loads with high priority for above-the-fold content
+- **Responsive design**: Avatar scales properly across all devices
+- **Professional styling**: Maintains rounded corners, borders, and elevation shadows
 
 ### Author
 - Kyle Dilbeck 
