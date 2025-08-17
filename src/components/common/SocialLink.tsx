@@ -113,10 +113,10 @@ export default function SocialLink({
         variant={ButtonVariant.PRIMARY}
         size={ButtonSize.MEDIUM}
         onClick={() => window.open(url, '_blank')}
-        className="w-full"
+        className="w-full flex items-center justify-center gap-2"
       >
         <i className={getActionIcon()}></i>
-        {getActionText()}
+        <span>{getActionText()}</span>
       </Button>
     </Card>
   )
