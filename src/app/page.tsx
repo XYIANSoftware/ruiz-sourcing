@@ -1,3 +1,5 @@
+'use client'
+
 import { Card } from 'primereact/card'
 import Container from '@/components/layout/Container'
 import Button from '@/components/common/Button'

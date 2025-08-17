@@ -21,12 +21,12 @@ export default function AboutPage() {
                 
                 <p>
                   With a deep understanding of procurement strategies and market dynamics, Juan plays a crucial role in 
-                  ensuring the company's product lines meet the highest quality standards while maintaining competitive pricing. 
+                  ensuring the company&apos;s product lines meet the highest quality standards while maintaining competitive pricing. 
                   His expertise spans across various product categories, including the highly anticipated upcoming lemonade release.
                 </p>
                 
                 <p>
-                  Juan's approach combines strategic thinking with hands-on execution, working closely with suppliers, 
+                  Juan&apos;s approach combines strategic thinking with hands-on execution, working closely with suppliers, 
                   internal stakeholders, and industry partners to drive innovation and operational excellence in procurement processes.
                 </p>
               </div>

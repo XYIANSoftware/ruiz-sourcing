@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Mobile-first responsive design using PrimeFlex utility classes
 - Barrel exports for clean component imports
 
+### Fixed
+- Removed deprecated `appDir` from Next.js config
+- Fixed ESLint configuration compatibility
+- Fixed unescaped apostrophes in About page
+- Converted Home page to client component for interactivity
+
 ### Technical Details
 - Next.js 15+ with App Router
 - TypeScript configuration with path aliases
