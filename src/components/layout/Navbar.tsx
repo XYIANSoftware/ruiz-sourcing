@@ -43,10 +43,10 @@ export default function Navbar() {
               ))}
             </div>
             
-            {/* Mobile menu button */}
+            {/* Mobile menu button with beer stein icon */}
             <div className="md:hidden">
-              <button className="p-2 text-amber-400 hover:text-amber-300 transition-colors duration-300">
-                <i className="pi pi-bars text-xl"></i>
+              <button className="p-2 text-amber-400 hover:text-amber-300 transition-colors duration-300 group">
+                <i className="pi pi-beer text-xl group-hover:scale-110 transition-transform duration-300"></i>
               </button>
             </div>
           </div>

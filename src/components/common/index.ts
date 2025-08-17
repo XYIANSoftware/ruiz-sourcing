@@ -1,1 +1,7 @@
-export { default as Button } from './Button' 
+export { default as Button } from './Button'
+export { default as SocialLink } from './SocialLink'
+export { default as HeroSection } from './HeroSection'
+export { default as InfoCard } from './InfoCard'
+export { default as HighlightItem } from './HighlightItem'
+export { default as PageHeader } from './PageHeader'
+export { default as WelcomeSection } from './WelcomeSection' 
