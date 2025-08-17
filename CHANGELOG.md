@@ -496,6 +496,6 @@ platform={SocialPlatform.LINKEDIN}
 
 ## [0.8.11] - 2025-08-17
 
-### Added
+### Changed
 
-- **Code style**: Introduced `.prettierrc` to standardize formatting (100 print width, 2-space tabs, no semicolons, single quotes, trailing commas where valid). This aligns with current project style and reduces diff noise.
+- **Open Graph/Twitter**: Reverted preview image to `juan-avatar.png`, set OG `type: profile`, and added Twitter `site`/`creator` to encourage platforms to display the description beneath the title.
