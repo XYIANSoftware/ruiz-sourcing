@@ -136,4 +136,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Future-proof**: Easy to extend with new values
 
 ### Author
+- Kyle Dilbeck
+
+## [0.4.0] - 2024-12-19
+
+### Added
+- **PrimeReact component integration** throughout the application for better styling and responsiveness
+- **Simplified parallax background** using CSS approach with `.parallax` class
+- **Enhanced smooth scrolling** with scroll-padding-top for fixed navbar
+- **PrimeReact Card components** replacing custom div containers for better consistency
+
+### Refactored
+- **Background implementation**: Simplified from complex React components to clean CSS approach
+- **Button component**: Now extends PrimeReact Button while maintaining custom styling and variants
+- **HeroSection**: Now uses PrimeReact Card component
+- **InfoCard**: Now uses PrimeReact Card component
+- **WelcomeSection**: Now uses PrimeReact Card component
+- **SocialLink**: Now uses PrimeReact Card component with PrimeReact Button
+- **Layout**: Cleaner background implementation with CSS parallax class
+
+### Technical Improvements
+- **Better PrimeReact integration**: Leveraging PrimeReact's built-in styling and responsiveness
+- **Cleaner CSS**: Simplified background implementation using CSS classes
+- **Improved scrolling**: Enhanced smooth scrolling with proper navbar offset
+- **Component consistency**: All card-based components now use PrimeReact Card
+- **Better maintainability**: PrimeReact handles responsive design and styling
+
+### Benefits of PrimeReact Integration
+- **Built-in responsiveness**: PrimeReact components handle mobile/desktop automatically
+- **Consistent styling**: All components follow PrimeReact design patterns
+- **Better accessibility**: PrimeReact components include accessibility features
+- **Professional appearance**: PrimeReact components look polished out of the box
+- **Easier maintenance**: Less custom CSS to maintain
+
+### Author
 - Kyle Dilbeck 

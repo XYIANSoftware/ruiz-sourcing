@@ -1,4 +1,6 @@
-import { SocialPlatform } from '@/types'
+import { Card } from 'primereact/card'
+import { Button } from '@/components/common'
+import { SocialPlatform, ButtonVariant, ButtonSize } from '@/types'
 
 interface SocialLinkProps {
   platform: SocialPlatform
@@ -84,7 +86,9 @@ export default function SocialLink({
   }
 
   return (
-    <div className={`bg-gray-800/90 backdrop-blur-xl border border-amber-500/20 rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in ${className}`}>
+    <Card 
+      className={`bg-gray-800/90 backdrop-blur-xl border border-amber-500/20 rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in ${className}`}
+    >
       <div className={`w-18 h-18 bg-gradient-to-r ${getPlatformColors()} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
         <i className={`${getPlatformIcon()} text-2xl text-white`}></i>
       </div>
@@ -95,13 +99,15 @@ export default function SocialLink({
         {description}
       </p>
       
-      <a 
-        href={url} 
-        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-xl transition-all duration-300 hover:from-amber-600 hover:to-amber-700 hover:-translate-y-1 hover:shadow-lg"
+      <Button 
+        variant={ButtonVariant.PRIMARY}
+        size={ButtonSize.MEDIUM}
+        onClick={() => window.open(url, '_blank')}
+        className="w-full"
       >
         <i className={getActionIcon()}></i>
         {getActionText()}
-      </a>
-    </div>
+      </Button>
+    </Card>
   )
 } 

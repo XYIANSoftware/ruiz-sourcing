@@ -1,3 +1,5 @@
+'use client'
+
 import { PageHeader, WelcomeSection, SocialLink } from '@/components/common'
 import { SocialPlatform, AnimationDelay } from '@/types'
 

@@ -27,21 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans`}>
+      <body className={`${inter.variable} font-sans parallax`}>
         <PrimeReactProvider>
           <div className="min-h-screen flex flex-col relative">
-            {/* Parallax background with your image */}
-            <div 
-              className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: 'url(/parallax-background-global.png)',
-                backgroundAttachment: 'fixed'
-              }}
-            >
-              {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80"></div>
-            </div>
-            
             <Navbar />
             <main className="flex-1 relative z-10">
               {children}
