@@ -1,45 +1,36 @@
-You are building a Next.js 15+ web application named **Ruiz-Sourcing** for Juan Ruiz, a Procurement Manager at Happy Dad Hard Seltzer & Tea.  
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-### Requirements:
-- Use **Next.js 15+ (App Router)** with **TypeScript**.
-- Use **PrimeReact** and **PrimeFlex** for all UI and layout (no plain HTML buttons/inputs where PrimeReact equivalents exist).
-- Apply the **PrimeReact Dark Amber theme** globally.
-- Use a **mobile-first, fully responsive design**.
-- Structure the project with a **clean modular approach**:
-  - `components/common/` → reusable UI elements (e.g., styled buttons, nav links).
-  - `components/layout/` → layout components like Navbar, Footer, Container.
-  - `features/` → page-specific or feature-specific sections.
-  - `constants/` → for static data (like links, menu items).
-  - `types/` → TypeScript interfaces and types.
-  - `styles/` → global SCSS files and partials.
-- Follow best practices:
-  - Barrel exports (`index.ts`) where useful.
-  - Keep components pure and reusable.
-  - Use PrimeFlex utility classes over custom CSS when possible.
-  - Keep global styles minimal, just for layout fixes.
+## Getting Started
 
-### Pages:
-1. **Home Page**  
-   - Hero section introducing Juan Ruiz.  
-   - Small blurb: “Procurement Manager at Happy Dad Hard Seltzer & Tea, overseeing product lines like the upcoming lemonade release.”  
-   - Call-to-action button linking to Contact.  
-   - Use PrimeReact components for structure.
+First, run the development server:
 
-2. **About Page**  
-   - Short professional bio (starter text, can be updated later).  
-   - Mention Happy Dad and his role in procurement/product management.  
-   - Placeholder space for future content (e.g., product highlights).  
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-3. **Contact Page**  
-   - Simple PrimeReact form (Name, Email, Message).  
-   - Validation (required fields, email format).  
-   - Success message toast when submitted.  
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Additional UI:
-- Sticky **PrimeReact Menubar** Navbar with routes (Home, About, Contact).  
-- Simple Footer with © year + “Ruiz-Sourcing”.  
-- Use PrimeReact **Card**, **Button**, **InputText**, **Toast**, **Dialog** as much as possible.  
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Deployment:
-- Must work seamlessly when deployed to **Netlify**.  
-- Repo will be named `ruiz-sourcing`.  
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

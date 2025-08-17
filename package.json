@@ -1,48 +1,27 @@
 {
   "name": "ruiz-sourcing",
   "version": "0.1.0",
-  "description": "Next.js 15+ web application for Juan Ruiz, a Procurement Manager at Happy Dad Hard Seltzer & Tea",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^14.2.15",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "next": "^15.0.0",
-    "primeflex": "^4.0.0",
-    "primeicons": "^6.0.0",
-    "primereact": "^10.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "typescript": "^5.0.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.4.6"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^15.0.0",
-    "sass": "^1.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/XYIANSoftware/ruiz-sourcing.git"
-  },
-  "keywords": [
-    "nextjs",
-    "procurement",
-    "ruiz-sourcing",
-    "primereact"
-  ],
-  "author": "Kyle Dilbeck",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/XYIANSoftware/ruiz-sourcing/issues"
-  },
-  "homepage": "https://github.com/XYIANSoftware/ruiz-sourcing#readme"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "@eslint/eslintrc": "^3"
+  }
 }
