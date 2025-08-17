@@ -1,21 +1,22 @@
 import { PageHeader, WelcomeSection, SocialLink } from '@/components/common'
+import { SocialPlatform, AnimationDelay } from '@/types'
 
 export default function ContactPage() {
   const socialLinks = [
     {
-      platform: 'linkedin' as const,
+      platform: SocialPlatform.LINKEDIN,
       url: '#',
       label: 'LinkedIn',
       description: 'Connect professionally and stay updated with industry insights, procurement strategies, and professional achievements.'
     },
     {
-      platform: 'instagram' as const,
+      platform: SocialPlatform.INSTAGRAM,
       url: '#',
       label: 'Instagram',
       description: 'Follow for behind-the-scenes insights into product development, industry events, and procurement innovation.'
     },
     {
-      platform: 'email' as const,
+      platform: SocialPlatform.EMAIL,
       url: 'mailto:juan.ruiz@example.com',
       label: 'Email',
       description: 'Send me a direct message for business inquiries, collaboration opportunities, or procurement consultation requests.'
@@ -48,7 +49,7 @@ export default function ContactPage() {
               url={link.url}
               label={link.label}
               description={link.description}
-              className={index === 0 ? 'animation-delay-400' : index === 1 ? 'animation-delay-500' : 'animation-delay-600'}
+              className={index === 0 ? AnimationDelay.DELAY_400 : index === 1 ? AnimationDelay.DELAY_500 : AnimationDelay.DELAY_600}
             />
           ))}
         </div>

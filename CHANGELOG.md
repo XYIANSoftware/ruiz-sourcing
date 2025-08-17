@@ -100,4 +100,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Professional architecture**: Following React best practices for enterprise applications
 
 ### Author
+- Kyle Dilbeck
+
+## [0.3.0] - 2024-12-19
+
+### Added
+- **Enum-based constants** to replace all magic strings for type safety and maintainability
+- **Type-safe enums** for:
+  - `SocialPlatform`: LinkedIn, Instagram, Email, Twitter, Facebook, YouTube
+  - `ButtonVariant`: Primary, Secondary, Outline
+  - `ButtonSize`: Small, Medium, Large
+  - `AnimationDelay`: None, Delay_200, Delay_400, Delay_500, Delay_600, Delay_700, Delay_800
+- **Enhanced TypeScript interfaces** with proper enum usage
+- **Improved type safety** across all components
+
+### Refactored
+- **SocialLink component**: Now uses `SocialPlatform` enum instead of magic strings
+- **Button component**: Now uses `ButtonVariant` and `ButtonSize` enums
+- **Contact page**: Updated to use `SocialPlatform` and `AnimationDelay` enums
+- **About page**: Updated to use `AnimationDelay` enum for consistent animations
+- **Type definitions**: Centralized all enums in `src/types/index.ts`
+
+### Code Quality Improvements
+- **Eliminated magic strings**: All string constants now use proper enums
+- **Better IntelliSense**: IDE autocomplete now shows valid enum values
+- **Type safety**: Compile-time checking prevents invalid string values
+- **Maintainability**: Adding new platforms/variants only requires enum updates
+- **Professional standards**: Following enterprise-level TypeScript best practices
+
+### Benefits of Enum Usage
+- **No more typos**: TypeScript catches invalid values at compile time
+- **Easy refactoring**: Rename enum values in one place
+- **Better documentation**: Enums serve as living documentation
+- **IDE support**: Full autocomplete and error checking
+- **Future-proof**: Easy to extend with new values
+
+### Author
 - Kyle Dilbeck 

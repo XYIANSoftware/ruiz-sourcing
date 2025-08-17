@@ -17,11 +17,12 @@ You are building a Next.js 15+ web application named **Ruiz-Sourcing** for Juan 
   - Keep components pure and reusable.
   - Use PrimeFlex utility classes over custom CSS when possible.
   - Keep global styles minimal, just for layout fixes.
+  - **Use enums instead of magic strings** for type safety and maintainability.
 
 ### Pages:
 1. **Home Page**  
    - Hero section introducing Juan Ruiz.  
-   - Small blurb: “Procurement Manager at Happy Dad Hard Seltzer & Tea, overseeing product lines like the upcoming lemonade release.”  
+   - Small blurb: "Procurement Manager at Happy Dad Hard Seltzer & Tea, overseeing product lines like the upcoming lemonade release."  
    - Call-to-action button linking to Contact.  
    - Use PrimeReact components for structure.
 
@@ -31,15 +32,24 @@ You are building a Next.js 15+ web application named **Ruiz-Sourcing** for Juan 
    - Placeholder space for future content (e.g., product highlights).  
 
 3. **Contact Page**  
-   - Simple PrimeReact form (Name, Email, Message).  
-   - Validation (required fields, email format).  
-   - Success message toast when submitted.  
+   - **Informational contact page** with welcoming content and social media links.
+   - **No form** - instead displays professional contact information and social media integration.
+   - Links for LinkedIn, Instagram, and Email with professional descriptions.
+   - Welcoming blurb about collaboration opportunities.
 
 ### Additional UI:
 - Sticky **PrimeReact Menubar** Navbar with routes (Home, About, Contact).  
-- Simple Footer with © year + “Ruiz-Sourcing”.  
+- Simple Footer with © year + "Ruiz-Sourcing".  
 - Use PrimeReact **Card**, **Button**, **InputText**, **Toast**, **Dialog** as much as possible.  
+- **Beverage-themed elements** like beer stein icon for mobile menu.
+
+### Architecture:
+- **Pure functional components** for maximum reusability and maintainability.
+- **Enum-based constants** instead of magic strings for type safety.
+- **Component-driven development** with reusable UI components.
+- **Data-driven approach** for easy content management and updates.
 
 ### Deployment:
 - Must work seamlessly when deployed to **Netlify**.  
 - Repo will be named `ruiz-sourcing`.  
+- **Public folder** properly configured for static assets and images.  

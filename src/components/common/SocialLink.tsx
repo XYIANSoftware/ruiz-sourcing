@@ -1,5 +1,7 @@
+import { SocialPlatform } from '@/types'
+
 interface SocialLinkProps {
-  platform: 'linkedin' | 'instagram' | 'email' | 'twitter' | 'facebook' | 'youtube'
+  platform: SocialPlatform
   url: string
   label: string
   description: string
@@ -17,17 +19,17 @@ export default function SocialLink({
 }: SocialLinkProps) {
   const getPlatformIcon = () => {
     switch (platform) {
-      case 'linkedin':
+      case SocialPlatform.LINKEDIN:
         return 'pi pi-linkedin'
-      case 'instagram':
+      case SocialPlatform.INSTAGRAM:
         return 'pi pi-instagram'
-      case 'email':
+      case SocialPlatform.EMAIL:
         return 'pi pi-envelope'
-      case 'twitter':
+      case SocialPlatform.TWITTER:
         return 'pi pi-twitter'
-      case 'facebook':
+      case SocialPlatform.FACEBOOK:
         return 'pi pi-facebook'
-      case 'youtube':
+      case SocialPlatform.YOUTUBE:
         return 'pi pi-youtube'
       default:
         return 'pi pi-link'
@@ -36,17 +38,17 @@ export default function SocialLink({
 
   const getPlatformColors = () => {
     switch (platform) {
-      case 'linkedin':
+      case SocialPlatform.LINKEDIN:
         return 'from-blue-600 to-blue-700'
-      case 'instagram':
+      case SocialPlatform.INSTAGRAM:
         return 'from-pink-500 to-purple-600'
-      case 'email':
+      case SocialPlatform.EMAIL:
         return 'from-amber-500 to-amber-600'
-      case 'twitter':
+      case SocialPlatform.TWITTER:
         return 'from-blue-400 to-blue-500'
-      case 'facebook':
+      case SocialPlatform.FACEBOOK:
         return 'from-blue-600 to-blue-700'
-      case 'youtube':
+      case SocialPlatform.YOUTUBE:
         return 'from-red-500 to-red-600'
       default:
         return iconColor
@@ -55,17 +57,17 @@ export default function SocialLink({
 
   const getActionText = () => {
     switch (platform) {
-      case 'linkedin':
+      case SocialPlatform.LINKEDIN:
         return 'Connect on LinkedIn'
-      case 'instagram':
+      case SocialPlatform.INSTAGRAM:
         return 'Follow on Instagram'
-      case 'email':
+      case SocialPlatform.EMAIL:
         return 'Send Email'
-      case 'twitter':
+      case SocialPlatform.TWITTER:
         return 'Follow on Twitter'
-      case 'facebook':
+      case SocialPlatform.FACEBOOK:
         return 'Follow on Facebook'
-      case 'youtube':
+      case SocialPlatform.YOUTUBE:
         return 'Subscribe on YouTube'
       default:
         return `Visit ${label}`
@@ -74,7 +76,7 @@ export default function SocialLink({
 
   const getActionIcon = () => {
     switch (platform) {
-      case 'email':
+      case SocialPlatform.EMAIL:
         return 'pi pi-send'
       default:
         return 'pi pi-external-link'

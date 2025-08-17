@@ -1,4 +1,5 @@
 import { PageHeader, InfoCard, HighlightItem } from '@/components/common'
+import { AnimationDelay } from '@/types'
 
 export default function AboutPage() {
   const infoCards = [
@@ -60,7 +61,7 @@ export default function AboutPage() {
               icon={card.icon}
               title={card.title}
               content={card.content}
-              animationDelay={index === 0 ? '' : index === 1 ? 'animation-delay-200' : 'animation-delay-400'}
+              animationDelay={index === 0 ? AnimationDelay.NONE : index === 1 ? AnimationDelay.DELAY_200 : AnimationDelay.DELAY_400}
             />
           ))}
         </div>
