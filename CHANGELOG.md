@@ -505,3 +505,9 @@ platform={SocialPlatform.LINKEDIN}
 ### Changed
 
 - **Domain**: Updated base URL to `https://juanruiz.work` and added canonical URL for SEO.
+
+## [0.8.13] - 2025-08-17
+
+### Changed
+
+- **Desktop header brand**: Updated Menubar brand label from `COMPANY_INFO.name` to "Juan Ruiz" as requested.

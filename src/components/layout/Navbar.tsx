@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useRouter, usePathname } from 'next/navigation'
@@ -19,13 +18,10 @@ export default function Navbar() {
   }
 
   const start = (
-    <div 
-      className="flex items-center cursor-pointer group" 
-      onClick={() => router.push('/')}
-    >
+    <div className="flex items-center cursor-pointer group" onClick={() => router.push('/')}>
       <i className="pi pi-briefcase text-2xl mr-3 text-amber-400 group-hover:text-amber-300 transition-colors duration-300"></i>
       <span className="text-2xl font-bold text-amber-400 group-hover:text-amber-300 transition-colors duration-300">
-        {COMPANY_INFO.name}
+        Juan Ruiz
       </span>
     </div>
   )
@@ -38,9 +34,7 @@ export default function Navbar() {
           label={item.label}
           icon={item.icon}
           className={`mx-1 transition-all duration-300 ${
-            pathname === item.url
-              ? 'p-button-raised p-button-outlined'
-              : 'p-button-text'
+            pathname === item.url ? 'p-button-raised p-button-outlined' : 'p-button-text'
           }`}
           onClick={() => handleMenuClick(item.url)}
         />
@@ -52,52 +46,59 @@ export default function Navbar() {
     {
       label: 'Home',
       icon: 'pi pi-home',
-      command: () => router.push('/')
+      command: () => router.push('/'),
     },
     {
-      label: 'About', 
+      label: 'About',
       icon: 'pi pi-user',
-      command: () => router.push('/about')
+      command: () => router.push('/about'),
     },
     {
       label: 'Contact',
-      icon: 'pi pi-envelope', 
-      command: () => router.push('/contact')
-    }
+      icon: 'pi pi-envelope',
+      command: () => router.push('/contact'),
+    },
   ]
 
   const mobileMenuItems = [
     {
       label: 'Home',
       icon: 'pi pi-home',
-      url: '/'
+      url: '/',
     },
     {
-      label: 'About', 
+      label: 'About',
       icon: 'pi pi-user',
-      url: '/about'
+      url: '/about',
     },
     {
       label: 'Contact',
-      icon: 'pi pi-envelope', 
-      url: '/contact'
-    }
+      icon: 'pi pi-envelope',
+      url: '/contact',
+    },
   ]
 
   const CustomMenuIcon = () => (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Beer Foam-Colored Menu Bars */}
-      <rect x="10" y="12" width="24" height="3" rx="1.5" fill="#F6C867"/> {/* amber/foam */}
-      <rect x="10" y="22" width="24" height="3" rx="1.5" fill="#F6C867"/>
-      <rect x="10" y="32" width="24" height="3" rx="1.5" fill="#F6C867"/>
-
+      <rect x="10" y="12" width="24" height="3" rx="1.5" fill="#F6C867" /> {/* amber/foam */}
+      <rect x="10" y="22" width="24" height="3" rx="1.5" fill="#F6C867" />
+      <rect x="10" y="32" width="24" height="3" rx="1.5" fill="#F6C867" />
       {/* Mini Beer Can Icon */}
-      <rect x="38" y="20" width="4" height="8" rx="1" fill="#D4A64F" stroke="#AA7B2B" strokeWidth="0.8"/>
-      <circle cx="40" cy="20" r="1" fill="#fff"/>
-
+      <rect
+        x="38"
+        y="20"
+        width="4"
+        height="8"
+        rx="1"
+        fill="#D4A64F"
+        stroke="#AA7B2B"
+        strokeWidth="0.8"
+      />
+      <circle cx="40" cy="20" r="1" fill="#fff" />
       {/* Subtle Sparkle (optional aesthetic) */}
-      <circle cx="16" cy="8" r="1.2" fill="#fff" fillOpacity="0.6"/>
-      <circle cx="28" cy="38" r="1" fill="#fff" fillOpacity="0.3"/>
+      <circle cx="16" cy="8" r="1.2" fill="#fff" fillOpacity="0.6" />
+      <circle cx="28" cy="38" r="1" fill="#fff" fillOpacity="0.3" />
     </svg>
   )
 
@@ -110,7 +111,7 @@ export default function Navbar() {
           style={{
             background: 'rgba(245, 158, 11, 0.1)',
             border: '1px solid rgba(245, 158, 11, 0.3)',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
           }}
           onClick={() => setMobileMenuVisible(true)}
         >
@@ -128,7 +129,7 @@ export default function Navbar() {
           style={{
             background: 'transparent',
             backdropFilter: 'blur(24px)',
-            borderBottom: '1px solid rgba(245, 158, 11, 0.2)'
+            borderBottom: '1px solid rgba(245, 158, 11, 0.2)',
           }}
         />
       </div>
@@ -142,7 +143,7 @@ export default function Navbar() {
         style={{
           background: 'rgba(17, 24, 39, 0.6)',
           backdropFilter: 'blur(24px)',
-          borderLeft: '1px solid rgba(245, 158, 11, 0.2)'
+          borderLeft: '1px solid rgba(245, 158, 11, 0.2)',
         }}
         header={
           <div className="text-center py-4">
@@ -159,24 +160,18 @@ export default function Navbar() {
                 label={item.label}
                 icon={item.icon}
                 className={`w-full mb-3 justify-start p-3 ${
-                  pathname === item.url
-                    ? 'p-button-raised p-button-outlined'
-                    : 'p-button-text'
+                  pathname === item.url ? 'p-button-raised p-button-outlined' : 'p-button-text'
                 }`}
                 style={{
-                  background: pathname === item.url 
-                    ? 'rgba(245, 158, 11, 0.1)' 
-                    : 'transparent',
-                  border: pathname === item.url 
-                    ? '1px solid rgba(245, 158, 11, 0.3)' 
-                    : 'none',
-                  color: pathname === item.url ? '#f59e0b' : '#d1d5db'
+                  background: pathname === item.url ? 'rgba(245, 158, 11, 0.1)' : 'transparent',
+                  border: pathname === item.url ? '1px solid rgba(245, 158, 11, 0.3)' : 'none',
+                  color: pathname === item.url ? '#f59e0b' : '#d1d5db',
                 }}
                 onClick={() => handleMenuClick(item.url)}
               />
             ))}
           </div>
-          
+
           {/* Footer Section */}
           <div className="p-4 border-t border-amber-500/20 mt-auto">
             <div className="text-center">
@@ -185,8 +180,8 @@ export default function Navbar() {
               </div>
               <h3 className="text-lg font-bold text-amber-300 mb-2">Ruiz-Sourcing</h3>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Professional procurement management solutions for the beverage industry. 
-                Let&apos;s connect and explore opportunities together.
+                Professional procurement management solutions for the beverage industry. Let&apos;s
+                connect and explore opportunities together.
               </p>
             </div>
           </div>
@@ -194,4 +189,4 @@ export default function Navbar() {
       </Sidebar>
     </>
   )
-} 
+}
