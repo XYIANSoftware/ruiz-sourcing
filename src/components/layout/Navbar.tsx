@@ -18,16 +18,8 @@ export default function Navbar() {
   }
 
   const start = (
-    <div className="flex items-center cursor-pointer group" onClick={() => router.push('/')}>
-      <i className="pi pi-briefcase text-2xl mr-3 text-amber-400 group-hover:text-amber-300 transition-colors duration-300"></i>
-      <span className="text-2xl font-bold text-amber-400 group-hover:text-amber-300 transition-colors duration-300">
-        Juan Ruiz
-      </span>
-    </div>
-  )
-
-  const end = (
-    <div className="hidden md:flex">
+    <div className="hidden md:flex items-center">
+      <i className="pi pi-briefcase text-2xl mr-3 text-amber-400"></i>
       {NAVIGATION_ITEMS.map((item, index) => (
         <Button
           key={index}
@@ -42,23 +34,9 @@ export default function Navbar() {
     </div>
   )
 
-  const items = [
-    {
-      label: 'Home',
-      icon: 'pi pi-home',
-      command: () => router.push('/'),
-    },
-    {
-      label: 'About',
-      icon: 'pi pi-user',
-      command: () => router.push('/about'),
-    },
-    {
-      label: 'Contact',
-      icon: 'pi pi-envelope',
-      command: () => router.push('/contact'),
-    },
-  ]
+  const end = null
+
+  // Removed legacy Menubar items to avoid duplicate white menu
 
   const mobileMenuItems = [
     {
@@ -122,7 +100,6 @@ export default function Navbar() {
       {/* Desktop Navigation - Hidden on Mobile */}
       <div className="hidden md:block sticky top-0 z-40">
         <Menubar
-          model={items}
           start={start}
           end={end}
           className="border-none shadow-2xl backdrop-blur-xl"

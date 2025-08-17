@@ -511,3 +511,9 @@ platform={SocialPlatform.LINKEDIN}
 ### Changed
 
 - **Desktop header brand**: Updated Menubar brand label from `COMPANY_INFO.name` to "Juan Ruiz" as requested.
+
+## [0.8.14] - 2025-08-17
+
+### Changed
+
+- **Desktop navigation**: Removed legacy white Menubar items and moved the amber-styled navigation button group to the left with a briefcase icon. Mobile sidebar remains unchanged.
