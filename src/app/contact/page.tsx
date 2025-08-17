@@ -3,6 +3,7 @@
 import { PageHeader, WelcomeSection, SocialLink } from '@/components/common'
 import { SocialPlatform, AnimationDelay } from '@/types'
 import { Card } from 'primereact/card'
+import Image from 'next/image'
 
 export default function ContactPage() {
   const socialLinks = [
@@ -36,6 +37,23 @@ export default function ContactPage() {
           subtitle="Ready to discuss procurement opportunities? Let's connect and explore how we can work together to drive success in your product development and sourcing initiatives."
         />
         
+        {/* Contact Hero Image */}
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="w-32 h-32 mx-auto mb-8">
+            <Image
+              src="/main-icon.png"
+              alt="Contact Icon"
+              width={128}
+              height={128}
+              className="rounded-3xl shadow-2xl"
+              style={{
+                border: '2px solid rgba(245, 158, 11, 0.3)',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+              }}
+            />
+          </div>
+        </div>
+        
         {/* Welcome Section */}
         <WelcomeSection
           icon="pi pi-handshake"
@@ -44,7 +62,7 @@ export default function ContactPage() {
         />
         
         {/* Social Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {socialLinks.map((link, index) => (
             <SocialLink
               key={index}
@@ -59,7 +77,7 @@ export default function ContactPage() {
         
         {/* Contact Info */}
         <Card 
-          className="text-center animate-fade-in animation-delay-700"
+          className="text-center animate-fade-in animation-delay-700 mb-8"
           style={{
             background: 'rgba(17, 24, 39, 0.15)',
             backdropFilter: 'blur(20px)',
@@ -71,7 +89,7 @@ export default function ContactPage() {
               style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Ready to Collaborate?
           </h2>
-          <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed"
+          <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed mb-8"
              style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)' }}>
             I&apos;m always interested in exploring new opportunities and building meaningful partnerships. 
             Whether you have a specific project in mind or just want to discuss the industry landscape, 
