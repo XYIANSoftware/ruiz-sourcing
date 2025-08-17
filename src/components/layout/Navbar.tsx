@@ -98,15 +98,16 @@ export default function Navbar() {
           }}
         />
         
-        {/* Mobile Menu Button - Beer Stein Icon */}
-        <div className="md:hidden absolute top-4 right-4 z-50">
+        {/* Mobile Menu Button - Beer Stein Icon - Properly Positioned */}
+        <div className="md:hidden fixed top-0 right-0 z-50 m-8 p-4">
           <Button
             icon="pi pi-beer"
             className="p-button-text p-button-rounded p-button-lg"
             style={{
               background: 'rgba(245, 158, 11, 0.1)',
               border: '1px solid rgba(245, 158, 11, 0.3)',
-              color: '#f59e0b'
+              color: '#f59e0b',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
             }}
             onClick={() => setMobileMenuVisible(true)}
           />
