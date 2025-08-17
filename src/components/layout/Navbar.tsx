@@ -102,7 +102,23 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="sticky top-0 z-50">
+      {/* Mobile Menu Button - Custom SVG Icon - At Very Top-Right Edge */}
+      <div className="md:hidden fixed top-4 right-4 z-50">
+        <button
+          className="w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+          style={{
+            background: 'rgba(245, 158, 11, 0.1)',
+            border: '1px solid rgba(245, 158, 11, 0.3)',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+          }}
+          onClick={() => setMobileMenuVisible(true)}
+        >
+          <CustomMenuIcon />
+        </button>
+      </div>
+
+      {/* Desktop Navigation */}
+      <div className="sticky top-0 z-40">
         <Menubar
           model={items}
           start={start}
@@ -114,21 +130,6 @@ export default function Navbar() {
             borderBottom: '1px solid rgba(245, 158, 11, 0.2)'
           }}
         />
-        
-        {/* Mobile Menu Button - Custom SVG Icon - Properly Positioned */}
-        <div className="md:hidden fixed top-0 right-0 z-50 m-8 p-4">
-          <button
-            className="w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-            style={{
-              background: 'rgba(245, 158, 11, 0.1)',
-              border: '1px solid rgba(245, 158, 11, 0.3)',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
-            }}
-            onClick={() => setMobileMenuVisible(true)}
-          >
-            <CustomMenuIcon />
-          </button>
-        </div>
       </div>
 
       {/* Mobile Sidebar */}
