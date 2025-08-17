@@ -205,4 +205,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Enhanced depth**: Components now have a more layered, professional appearance
 
 ### Author
+- Kyle Dilbeck
+
+## [0.6.0] - 2024-12-19
+
+### Added
+- **Proper PrimeReact Menubar** replacing custom navigation for better theme integration
+- **PrimeReact Button components** in navigation for consistent styling
+- **Enhanced hero image sizing** increased from 200x200 to 300x300 pixels
+- **Reduced gap between hero image and title** from mb-8 to mb-4 for better visual flow
+
+### Refactored
+- **Navigation system**: Replaced custom nav with PrimeReact Menubar component
+- **Component backgrounds**: Removed custom background colors, now using PrimeReact theme system
+- **Card components**: All cards now use proper PrimeReact Card styling without custom overrides
+- **Button styling**: Navigation buttons now use PrimeReact Button with proper theme classes
+
+### Technical Improvements
+- **Better PrimeReact integration**: Proper use of Menubar, Button, and Card components
+- **Theme consistency**: All components now follow PrimeReact Dark Amber theme properly
+- **Reduced custom CSS**: Eliminated hardcoded background colors and opacity values
+- **Cleaner component architecture**: Components now rely on PrimeReact's built-in styling
+
+### Visual Enhancements
+- **Professional navigation**: Menubar with proper PrimeReact styling and glossy appearance
+- **Better image proportions**: Hero image now properly sized and positioned
+- **Improved spacing**: Reduced gap between hero image and title for better visual hierarchy
+- **Theme consistency**: All components now follow the same visual language
+
+### Styling Philosophy
+- **PrimeReact-first approach**: Using PrimeReact components and theme system as intended
+- **Minimal custom CSS**: Only custom styling where absolutely necessary
+- **Theme integration**: Proper use of PrimeReact's built-in styling and responsiveness
+- **Professional appearance**: Leveraging PrimeReact's polished component design
+
+### Author
 - Kyle Dilbeck 

@@ -18,7 +18,7 @@ export default function WelcomeSection({
 }: WelcomeSectionProps) {
   return (
     <Card 
-      className={`bg-gray-800/50 backdrop-blur-xl border border-amber-500/20 rounded-3xl p-8 md:p-12 text-center mb-12 animate-fade-in ${animationDelay} ${className}`}
+      className={`text-center mb-12 animate-fade-in ${animationDelay} ${className}`}
     >
       <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-xl">
         <i className={`${icon} text-3xl text-white`}></i>

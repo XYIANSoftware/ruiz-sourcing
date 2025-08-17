@@ -45,16 +45,16 @@ export default function HeroSection({
   return (
     <div className={`min-h-screen flex items-center justify-center px-4 py-16 ${className}`}>
       <div className="max-w-6xl w-full text-center">
-        <Card className="bg-gray-800/50 backdrop-blur-xl border border-amber-500/20 rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+        <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
           
           {/* Hero Image */}
           {heroImage && (
-            <div className="mb-8 animate-fade-in">
+            <div className="mb-4 animate-fade-in">
               <Image 
                 src={heroImage} 
                 alt={heroImageAlt}
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 className="mx-auto rounded-2xl shadow-2xl"
                 priority
               />

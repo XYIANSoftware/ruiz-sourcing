@@ -2,6 +2,7 @@
 
 import { PageHeader, WelcomeSection, SocialLink } from '@/components/common'
 import { SocialPlatform, AnimationDelay } from '@/types'
+import { Card } from 'primereact/card'
 
 export default function ContactPage() {
   const socialLinks = [
@@ -57,7 +58,7 @@ export default function ContactPage() {
         </div>
         
         {/* Contact Info */}
-        <div className="bg-gray-800/50 backdrop-blur-xl border border-amber-500/20 rounded-3xl p-8 md:p-12 text-center animate-fade-in animation-delay-700">
+        <Card className="text-center animate-fade-in animation-delay-700">
           <h2 className="text-3xl md:text-4xl font-bold text-amber-300 mb-8">
             Ready to Collaborate?
           </h2>
@@ -66,7 +67,7 @@ export default function ContactPage() {
             Whether you have a specific project in mind or just want to discuss the industry landscape, 
             I&apos;d love to hear from you. Let&apos;s create something amazing together.
           </p>
-        </div>
+        </Card>
       </div>
     </div>
   )

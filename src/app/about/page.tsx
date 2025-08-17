@@ -1,5 +1,6 @@
 import { PageHeader, InfoCard, HighlightItem } from '@/components/common'
 import { AnimationDelay } from '@/types'
+import { Card } from 'primereact/card'
 
 export default function AboutPage() {
   const infoCards = [
@@ -67,7 +68,7 @@ export default function AboutPage() {
         </div>
         
         {/* Highlights Section */}
-        <div className="bg-gray-800/50 backdrop-blur-xl border border-amber-500/20 rounded-3xl p-8 md:p-12 text-center animate-fade-in animation-delay-600">
+        <Card className="text-center animate-fade-in animation-delay-600">
           <h2 className="text-3xl md:text-4xl font-bold text-amber-300 mb-12">
             Product Highlights & Expertise
           </h2>
@@ -82,7 +83,7 @@ export default function AboutPage() {
               />
             ))}
           </div>
-        </div>
+        </Card>
       </div>
     </div>
   )

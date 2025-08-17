@@ -87,7 +87,7 @@ export default function SocialLink({
 
   return (
     <Card 
-      className={`bg-gray-800/50 backdrop-blur-xl border border-amber-500/20 rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in ${className}`}
+      className={`text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in ${className}`}
     >
       <div className={`w-18 h-18 bg-gradient-to-r ${getPlatformColors()} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
         <i className={`${getPlatformIcon()} text-2xl text-white`}></i>

@@ -1,6 +1,8 @@
 'use client'
 
 import { useRouter, usePathname } from 'next/navigation'
+import { Menubar } from 'primereact/menubar'
+import { Button } from 'primereact/button'
 import { NAVIGATION_ITEMS, COMPANY_INFO } from '@/constants/navigation'
 
 export default function Navbar() {
@@ -11,47 +13,67 @@ export default function Navbar() {
     router.push(url)
   }
 
+  const start = (
+    <div 
+      className="flex items-center cursor-pointer group" 
+      onClick={() => router.push('/')}
+    >
+      <i className="pi pi-briefcase text-2xl mr-3 text-amber-400 group-hover:text-amber-300 transition-colors duration-300"></i>
+      <span className="text-2xl font-bold text-amber-400 group-hover:text-amber-300 transition-colors duration-300">
+        {COMPANY_INFO.name}
+      </span>
+    </div>
+  )
+
+  const end = (
+    <div className="hidden md:flex">
+      {NAVIGATION_ITEMS.map((item, index) => (
+        <Button
+          key={index}
+          label={item.label}
+          icon={item.icon}
+          className={`mx-1 transition-all duration-300 ${
+            pathname === item.url
+              ? 'p-button-raised p-button-outlined'
+              : 'p-button-text'
+          }`}
+          onClick={() => handleMenuClick(item.url)}
+        />
+      ))}
+    </div>
+  )
+
+  const items = [
+    {
+      label: 'Home',
+      icon: 'pi pi-home',
+      command: () => router.push('/')
+    },
+    {
+      label: 'About', 
+      icon: 'pi pi-user',
+      command: () => router.push('/about')
+    },
+    {
+      label: 'Contact',
+      icon: 'pi pi-envelope', 
+      command: () => router.push('/contact')
+    }
+  ]
+
   return (
     <div className="sticky top-0 z-50">
-      <nav className="bg-gray-900/95 backdrop-blur-xl border-b border-amber-500/20 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div 
-              className="flex items-center cursor-pointer group" 
-              onClick={() => router.push('/')}
-            >
-              <i className="pi pi-briefcase text-2xl mr-3 text-amber-400 group-hover:text-amber-300 transition-colors duration-300"></i>
-              <span className="text-2xl font-bold text-amber-400 group-hover:text-amber-300 transition-colors duration-300">
-                {COMPANY_INFO.name}
-              </span>
-            </div>
-            
-            <div className="hidden md:flex space-x-1">
-              {NAVIGATION_ITEMS.map((item, index) => (
-                <button
-                  key={index}
-                  className={`px-4 py-2 mx-1 rounded-lg transition-all duration-300 flex items-center ${
-                    pathname === item.url
-                      ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
-                      : 'text-gray-300 hover:bg-amber-500/10 hover:text-amber-300'
-                  }`}
-                  onClick={() => handleMenuClick(item.url)}
-                >
-                  <i className={`${item.icon} mr-2`}></i>
-                  {item.label}
-                </button>
-              ))}
-            </div>
-            
-            {/* Mobile menu button with beer stein icon */}
-            <div className="md:hidden">
-              <button className="p-2 text-amber-400 hover:text-amber-300 transition-colors duration-300 group">
-                <i className="pi pi-beer text-xl group-hover:scale-110 transition-transform duration-300"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Menubar
+        model={items}
+        start={start}
+        end={end}
+        className="border-none shadow-2xl bg-gray-900/95 backdrop-blur-xl"
+        style={{
+          background: 'rgba(17, 24, 39, 0.95)',
+          backdropFilter: 'blur(24px)',
+          borderBottom: '1px solid rgba(245, 158, 11, 0.2)'
+        }}
+      />
     </div>
   )
 } 
