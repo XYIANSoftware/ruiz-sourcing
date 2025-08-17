@@ -12,7 +12,7 @@ export default function HomePage() {
       description={HERO_CONTENT.description}
       ctaText={HERO_CONTENT.ctaText}
       ctaUrl={HERO_CONTENT.ctaUrl}
-      heroImage="/main-icon.png"
+      heroImage="/juan-avatar.png"
       heroImageAlt="Juan Ruiz - Procurement Manager"
     />
   )
