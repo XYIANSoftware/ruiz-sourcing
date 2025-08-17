@@ -9,7 +9,11 @@ import '@/styles/globals.scss'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter'
+})
 
 export const metadata: Metadata = {
   title: 'Ruiz-Sourcing - Procurement Management',
@@ -23,11 +27,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} font-sans`}>
         <PrimeReactProvider>
-          <div className="min-h-screen flex flex-column">
+          <div className="min-h-screen flex flex-column relative">
+            {/* Parallax background placeholder */}
+            <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 -z-10"></div>
+            
             <Navbar />
-            <main className="flex-1">
+            <main className="flex-1 relative z-10">
               {children}
             </main>
             <Footer />

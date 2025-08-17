@@ -10,35 +10,22 @@ export default function Button({
   size = 'medium', 
   className = '', 
   children, 
+  disabled,
   ...props 
 }: CustomButtonProps) {
-  const getVariantClasses = () => {
-    switch (variant) {
-      case 'primary':
-        return 'bg-amber-600 hover:bg-amber-700 border-amber-600 hover:border-amber-700'
-      case 'secondary':
-        return 'bg-gray-600 hover:bg-gray-700 border-gray-600 hover:border-gray-700'
-      case 'outline':
-        return 'bg-transparent border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white'
-      default:
-        return 'bg-amber-600 hover:bg-amber-700 border-amber-600 hover:border-amber-700'
-    }
-  }
-
-  const getSizeClasses = () => {
-    switch (size) {
-      case 'small':
-        return 'px-3 py-2 text-sm'
-      case 'large':
-        return 'px-6 py-4 text-lg'
-      default:
-        return 'px-4 py-3 text-base'
-    }
+  const getButtonClasses = () => {
+    const baseClasses = 'custom-button'
+    const variantClass = variant
+    const sizeClass = size
+    const disabledClass = disabled ? 'disabled' : ''
+    
+    return `${baseClasses} ${variantClass} ${sizeClass} ${disabledClass} ${className}`.trim()
   }
 
   return (
     <PrimeButton
-      className={`${getVariantClasses()} ${getSizeClasses()} ${className}`}
+      className={getButtonClasses()}
+      disabled={disabled}
       {...props}
     >
       {children}

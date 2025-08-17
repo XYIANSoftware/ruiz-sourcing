@@ -1,55 +1,98 @@
-import { Card } from 'primereact/card'
 import Container from '@/components/layout/Container'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <Container className="py-16">
-        <div className="max-w-4xl mx-auto">
-          <Card className="bg-gray-800 border-gray-700 text-white shadow-2xl mb-8">
-            <div className="p-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center text-gradient">
-                About Juan Ruiz
-              </h1>
-              
-              <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-                <p>
-                  Juan Ruiz is a seasoned procurement professional with extensive experience in the beverage industry. 
-                  Currently serving as Procurement Manager at <span className="text-amber-300 font-semibold">Happy Dad Hard Seltzer & Tea</span>, 
-                  Juan oversees all aspects of product sourcing, supplier relationships, and supply chain optimization.
-                </p>
-                
-                <p>
-                  With a deep understanding of procurement strategies and market dynamics, Juan plays a crucial role in 
-                  ensuring the company&apos;s product lines meet the highest quality standards while maintaining competitive pricing. 
-                  His expertise spans across various product categories, including the highly anticipated upcoming lemonade release.
-                </p>
-                
-                <p>
-                  Juan&apos;s approach combines strategic thinking with hands-on execution, working closely with suppliers, 
-                  internal stakeholders, and industry partners to drive innovation and operational excellence in procurement processes.
-                </p>
-              </div>
-            </div>
-          </Card>
+    <div className="about-page">
+      <Container>
+        <div className="about-container">
+          <div className="page-header">
+            <h1 className="page-title">About Juan Ruiz</h1>
+            <p className="page-subtitle">Procurement Professional & Industry Expert</p>
+          </div>
           
-          <Card className="bg-gray-800 border-gray-700 text-white shadow-2xl">
-            <div className="p-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-amber-400">
-                Product Highlights
-              </h2>
-              
-              <div className="text-center text-gray-400">
-                <p className="text-lg">
-                  <i className="pi pi-info-circle text-2xl text-amber-400 mb-4 block"></i>
-                  Content coming soon...
+          <div className="info-grid">
+            <div className="info-card">
+              <div className="card-icon">
+                <i className="pi pi-briefcase"></i>
+              </div>
+              <h3 className="card-title">Professional Experience</h3>
+              <p className="card-content">
+                Juan Ruiz is a seasoned procurement professional with extensive experience in the beverage industry. 
+                Currently serving as Procurement Manager at Happy Dad Hard Seltzer & Tea, Juan oversees all aspects 
+                of product sourcing, supplier relationships, and supply chain optimization.
+              </p>
+            </div>
+            
+            <div className="info-card">
+              <div className="card-icon">
+                <i className="pi pi-chart-line"></i>
+              </div>
+              <h3 className="card-title">Strategic Expertise</h3>
+              <p className="card-content">
+                With a deep understanding of procurement strategies and market dynamics, Juan plays a crucial role 
+                in ensuring the company&apos;s product lines meet the highest quality standards while maintaining 
+                competitive pricing across various product categories.
+              </p>
+            </div>
+            
+            <div className="info-card">
+              <div className="card-icon">
+                <i className="pi pi-users"></i>
+              </div>
+              <h3 className="card-title">Collaborative Approach</h3>
+              <p className="card-content">
+                Juan&apos;s approach combines strategic thinking with hands-on execution, working closely with 
+                suppliers, internal stakeholders, and industry partners to drive innovation and operational 
+                excellence in procurement processes.
+              </p>
+            </div>
+          </div>
+          
+          <div className="highlight-section">
+            <h2 className="highlight-title">Product Highlights & Expertise</h2>
+            
+            <div className="highlight-grid">
+              <div className="highlight-item">
+                <div className="item-icon">
+                  <i className="pi pi-star"></i>
+                </div>
+                <h4 className="item-title">Quality Assurance</h4>
+                <p className="item-description">
+                  Maintaining the highest standards across all product lines and supplier relationships
                 </p>
-                <p className="text-sm mt-4">
-                  Future updates will include product showcases, sourcing insights, and industry highlights.
+              </div>
+              
+              <div className="highlight-item">
+                <div className="item-icon">
+                  <i className="pi pi-shopping-cart"></i>
+                </div>
+                <h4 className="item-title">Strategic Sourcing</h4>
+                <p className="item-description">
+                  Optimizing procurement strategies for cost efficiency and product excellence
+                </p>
+              </div>
+              
+              <div className="highlight-item">
+                <div className="item-icon">
+                  <i className="pi pi-lightbulb"></i>
+                </div>
+                <h4 className="item-title">Innovation Focus</h4>
+                <p className="item-description">
+                  Driving new product development including the upcoming lemonade release
+                </p>
+              </div>
+              
+              <div className="highlight-item">
+                <div className="item-icon">
+                  <i className="pi pi-globe"></i>
+                </div>
+                <h4 className="item-title">Industry Network</h4>
+                <p className="item-description">
+                  Building strong partnerships across the beverage and procurement ecosystem
                 </p>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </Container>
     </div>
