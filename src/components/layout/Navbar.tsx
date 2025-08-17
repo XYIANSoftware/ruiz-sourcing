@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useRouter, usePathname } from 'next/navigation'
@@ -123,9 +124,9 @@ export default function Navbar() {
           model={items}
           start={start}
           end={end}
-          className="border-none shadow-2xl bg-gray-900/95 backdrop-blur-xl"
+          className="border-none shadow-2xl backdrop-blur-xl"
           style={{
-            background: 'rgba(17, 24, 39, 0.95)',
+            background: 'transparent',
             backdropFilter: 'blur(24px)',
             borderBottom: '1px solid rgba(245, 158, 11, 0.2)'
           }}
@@ -139,7 +140,7 @@ export default function Navbar() {
         onHide={() => setMobileMenuVisible(false)}
         className="w-80"
         style={{
-          background: 'rgba(17, 24, 39, 0.98)',
+          background: 'rgba(17, 24, 39, 0.6)',
           backdropFilter: 'blur(24px)',
           borderLeft: '1px solid rgba(245, 158, 11, 0.2)'
         }}

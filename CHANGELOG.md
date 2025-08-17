@@ -354,3 +354,50 @@ platform={SocialPlatform.LINKEDIN}
 
 ### Author
 - Kyle Dilbeck 
+
+## [0.8.3] - 2024-12-19
+
+### Fixed
+- **Contact page spacing**: Increased vertical spacing between social link cards on mobile (`gap-y-16`) and added internal padding to `SocialLink` cards for better breathing room.
+- **About page gap**: Reduced oversized gap before the highlights section by changing `mb-32` to `mb-16 md:mb-24` on the info grid.
+
+### Refactored
+- **SocialLink**: Wrapped content in `p-6 md:p-8` for consistent internal padding across breakpoints. 
+
+## [0.8.4] - 2024-12-19
+
+### Changed
+- **Unified Button styling**: PRIMARY variant now uses darker semi-transparent amber background with dark-blue text for improved theme consistency.
+- **Contact page layout**: Replaced social links grid with a simple `flex` column using `gap-4` for clean, predictable spacing on mobile.
+
+### Notes
+- Header/menubar components remain unchanged as requested. 
+
+## [0.8.5] - 2024-12-19
+
+### Added
+- **Social sharing metadata**: Set global title/description to “Juan Ruiz” and “The Man, The Myth, The Legend - Juan”. Added Open Graph and Twitter cards using `public/juan-avatar.png` and configured icons to use `favicon.ico` and `main-icon.png`. 
+
+## [0.8.6] - 2024-12-19
+
+### Fixed
+- **Custom button visibility**: Enforced PRIMARY button styling with inline background/text colors so PrimeReact theme cannot override it. Dark semi-transparent amber background with dark-blue text now appears consistently across all pages. 
+
+## [0.8.7] - 2024-12-19
+
+### Added
+- **Animation utility**: `.animate-fade-in-up` keyframes with delays and reduced-motion safeguard.
+
+### Changed
+- Applied fade-in-up to `HeroSection` card and CTA, Contact page hero image and info card, and `HighlightItem`s for consistent entrance animations.
+
+### Rationale
+- Improves visibility of the global parallax background without changing the global theme or color system. 
+
+## [0.8.8] - 2024-12-19
+
+### Fixed
+- **Parallax background not visible on mobile/iOS**: Added mobile and iOS-specific fallbacks to use `background-attachment: scroll` so the background image reliably renders on mobile devices.
+
+### Notes
+- No theme, color, or component visual changes. Only background-attachment behavior adjusted for mobile compatibility. 

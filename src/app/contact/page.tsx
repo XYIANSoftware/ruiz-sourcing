@@ -28,18 +28,20 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen py-20 px-4">
+      <div className="max-w-6xl mx-auto space-y-20">
         
         {/* Page Header */}
-        <PageHeader 
-          title="Get In Touch"
-          subtitle="Ready to discuss procurement opportunities? Let's connect and explore how we can work together to drive success in your product development and sourcing initiatives."
-        />
+        <div className="pt-8">
+          <PageHeader 
+            title="Get In Touch"
+            subtitle="Ready to discuss procurement opportunities? Let's connect and explore how we can work together to drive success in your product development and sourcing initiatives."
+          />
+        </div>
         
         {/* Contact Hero Image */}
-        <div className="text-center mb-8 animate-fade-in">
-          <div className="w-48 h-48 mx-auto mb-4">
+        <div className="text-center animate-fade-in-up">
+          <div className="w-48 h-48 mx-auto mb-8">
             <Image
               src="/main-icon.png"
               alt="Contact Icon"
@@ -55,47 +57,55 @@ export default function ContactPage() {
         </div>
         
         {/* Welcome Section */}
-        <WelcomeSection
-          icon="pi pi-handshake"
-          title="Let's Start a Conversation"
-          text="Whether you're looking to optimize your procurement processes, explore new product opportunities, or build strategic supplier relationships, I'm here to help. Let's discuss how we can collaborate to achieve your goals."
-        />
+        <div className="py-8">
+          <WelcomeSection
+            icon="pi pi-handshake"
+            title="Let's Start a Conversation"
+            text="Whether you're looking to optimize your procurement processes, explore new product opportunities, or build strategic supplier relationships, I'm here to help. Let's discuss how we can collaborate to achieve your goals."
+          />
+        </div>
         
         {/* Social Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-          {socialLinks.map((link, index) => (
-            <SocialLink
-              key={index}
-              platform={link.platform}
-              url={link.url}
-              label={link.label}
-              description={link.description}
-              className={index === 0 ? AnimationDelay.DELAY_400 : index === 1 ? AnimationDelay.DELAY_500 : AnimationDelay.DELAY_600}
-            />
-          ))}
+        <div className="py-12">
+          <div className="flex flex-col gap-4">
+            {socialLinks.map((link, index) => (
+              <SocialLink
+                key={index}
+                platform={link.platform}
+                url={link.url}
+                label={link.label}
+                description={link.description}
+                className={index === 0 ? AnimationDelay.DELAY_400 : index === 1 ? AnimationDelay.DELAY_500 : AnimationDelay.DELAY_600}
+              />
+            ))}
+          </div>
         </div>
         
         {/* Contact Info */}
-        <Card 
-          className="text-center animate-fade-in animation-delay-700 mb-8"
-          style={{
-            background: 'rgba(17, 24, 39, 0.15)',
-            backdropFilter: 'blur(20px)',
-            border: '1px solid rgba(245, 158, 11, 0.2)',
-            borderRadius: '24px'
-          }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-300 mb-8"
-              style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            Ready to Collaborate?
-          </h2>
-          <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed mb-8"
-             style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)' }}>
-            I&apos;m always interested in exploring new opportunities and building meaningful partnerships. 
-            Whether you have a specific project in mind or just want to discuss the industry landscape, 
-            I&apos;d love to hear from you. Let&apos;s create something amazing together.
-          </p>
-        </Card>
+        <div className="py-12">
+          <Card 
+            className="text-center animate-fade-in-up animation-delay-700"
+            style={{
+              background: 'rgba(17, 24, 39, 0.15)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(245, 158, 11, 0.2)',
+              borderRadius: '24px'
+            }}
+          >
+            <div className="p-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-amber-300 2"
+                  style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
+                Ready to Collaborate?
+              </h2>
+              <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed"
+                 style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)' }}>
+                I&apos;m always interested in exploring new opportunities and building meaningful partnerships. 
+                Whether you have a specific project in mind or just want to discuss the industry landscape, 
+                I&apos;d love to hear from you. Let&apos;s create something amazing together.
+              </p>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   )

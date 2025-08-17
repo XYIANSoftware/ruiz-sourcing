@@ -26,7 +26,7 @@ export default function WelcomeSection({
         borderRadius: '24px'
       }}
     >
-      <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-xl">
+      <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-xl">
         <i className={`${icon} text-3xl text-white`}></i>
       </div>
       

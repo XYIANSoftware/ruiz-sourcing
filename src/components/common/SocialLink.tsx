@@ -95,29 +95,31 @@ export default function SocialLink({
         borderRadius: '16px'
       }}
     >
-      <div className={`w-18 h-18 bg-gradient-to-r ${getPlatformColors()} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-        <i className={`${getPlatformIcon()} text-2xl text-white`}></i>
+      <div className="p-6 md:p-8">
+        <div className={`w-18 h-18 bg-gradient-to-r ${getPlatformColors()} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+          <i className={`${getPlatformIcon()} text-2xl text-white`}></i>
+        </div>
+        
+        <h3 className="text-2xl font-bold text-amber-300 mb-4"
+            style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          {label}
+        </h3>
+        
+        <p className="text-gray-100 mb-6 leading-relaxed"
+           style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)' }}>
+          {description}
+        </p>
+        
+        <Button 
+          variant={ButtonVariant.PRIMARY}
+          size={ButtonSize.MEDIUM}
+          onClick={() => window.open(url, '_blank')}
+          className="w-full flex items-center justify-center gap-2"
+        >
+          <i className={getActionIcon()}></i>
+          <span>{getActionText()}</span>
+        </Button>
       </div>
-      
-      <h3 className="text-2xl font-bold text-amber-300 mb-4"
-          style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
-        {label}
-      </h3>
-      
-      <p className="text-gray-100 mb-6 leading-relaxed"
-         style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)' }}>
-        {description}
-      </p>
-      
-      <Button 
-        variant={ButtonVariant.PRIMARY}
-        size={ButtonSize.MEDIUM}
-        onClick={() => window.open(url, '_blank')}
-        className="w-full flex items-center justify-center gap-2"
-      >
-        <i className={getActionIcon()}></i>
-        <span>{getActionText()}</span>
-      </Button>
     </Card>
   )
 } 

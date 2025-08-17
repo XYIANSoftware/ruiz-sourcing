@@ -25,7 +25,7 @@ export default function InfoCard({
         borderRadius: '16px'
       }}
     >
-      <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+      <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-lg">
         <i className={`${icon} text-2xl text-white`}></i>
       </div>
       

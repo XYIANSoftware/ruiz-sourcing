@@ -16,8 +16,28 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Ruiz-Sourcing - Procurement Management',
-  description: 'Juan Ruiz, Procurement Manager at Happy Dad Hard Seltzer & Tea',
+  title: 'Juan Ruiz',
+  description: 'The Man, The Myth, The Legend - Juan',
+  openGraph: {
+    title: 'Juan Ruiz',
+    description: 'The Man, The Myth, The Legend - Juan',
+    type: 'website',
+    siteName: 'Juan Ruiz',
+    images: [
+      { url: '/juan-avatar.png', width: 1200, height: 1200, alt: 'Juan Ruiz Avatar' }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Juan Ruiz',
+    description: 'The Man, The Myth, The Legend - Juan',
+    images: ['/juan-avatar.png']
+  },
+  icons: {
+    icon: [{ url: '/favicon.ico' }, { url: '/main-icon.png', type: 'image/png' }],
+    apple: [{ url: '/main-icon.png' }],
+    shortcut: ['/favicon.ico']
+  }
 }
 
 export default function RootLayout({

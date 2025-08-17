@@ -46,7 +46,7 @@ export default function HeroSection({
     <div className={`min-h-screen flex items-center justify-center px-4 py-16 ${className}`}>
       <div className="max-w-6xl w-full text-center">
         <Card 
-          className="shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2"
+          className="shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
           style={{
             background: 'rgba(17, 24, 39, 0.1)',
             backdropFilter: 'blur(20px)',
@@ -113,7 +113,7 @@ export default function HeroSection({
           
           {/* CTA Button */}
           {showCta && ctaText && (
-            <div className="animate-fade-in animation-delay-800">
+            <div className="animate-fade-in-up animation-delay-800">
               <Button 
                 size={ButtonSize.LARGE}
                 variant={ButtonVariant.PRIMARY}
