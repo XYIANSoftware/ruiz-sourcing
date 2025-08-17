@@ -38,13 +38,13 @@ export default function ContactPage() {
         />
         
         {/* Contact Hero Image */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="w-32 h-32 mx-auto mb-8">
+        <div className="text-center mb-8 animate-fade-in">
+          <div className="w-48 h-48 mx-auto mb-4">
             <Image
               src="/main-icon.png"
               alt="Contact Icon"
-              width={128}
-              height={128}
+              width={192}
+              height={192}
               className="rounded-3xl shadow-2xl"
               style={{
                 border: '2px solid rgba(245, 158, 11, 0.3)',
