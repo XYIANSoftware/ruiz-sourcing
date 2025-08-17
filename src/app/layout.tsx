@@ -27,15 +27,17 @@ export const metadata: Metadata = {
     description: 'The Man, The Myth, The Legend - Juan',
     type: 'website',
     siteName: 'Juan Ruiz',
+    url: siteUrl,
+    locale: 'en_US',
     images: [
-      { url: '/juan-avatar.png', width: 1200, height: 1200, alt: 'Juan Ruiz Avatar' }
+      { url: '/og-image.png', width: 1200, height: 630, alt: 'Juan Ruiz — The Man, The Myth, The Legend' }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Juan Ruiz',
     description: 'The Man, The Myth, The Legend - Juan',
-    images: ['/juan-avatar.png']
+    images: ['/og-image.png']
   },
   icons: {
     icon: [{ url: '/favicon.ico' }, { url: '/main-icon.png', type: 'image/png' }],

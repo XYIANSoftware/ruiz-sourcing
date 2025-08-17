@@ -417,3 +417,9 @@ platform={SocialPlatform.LINKEDIN}
 
 ### Fixed
 - **Next.js metadata warning**: Added `metadataBase` using env or localhost fallback to ensure absolute URLs for Open Graph/Twitter images. 
+
+## [0.8.10] - 2025-08-17
+
+### Changed
+- **Open Graph/Twitter image**: Switched to `public/og-image.png` (1200x630) to encourage platforms to show the description instead of only the domain.
+- Added `openGraph.url` and `openGraph.locale` for richer previews. 
