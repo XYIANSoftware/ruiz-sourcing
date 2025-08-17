@@ -412,3 +412,8 @@ platform={SocialPlatform.LINKEDIN}
 
 ### Impact
 - Homepage CTA and all usages of the custom `Button` now have a semi-transparent look consistent with the glassmorphism theme. 
+
+## [0.8.9] - 2025-08-17
+
+### Fixed
+- **Next.js metadata warning**: Added `metadataBase` using env or localhost fallback to ensure absolute URLs for Open Graph/Twitter images. 

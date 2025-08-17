@@ -15,7 +15,11 @@ const inter = Inter({
   variable: '--font-inter'
 })
 
+// Determine site URL for absolute metadata resolution
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Juan Ruiz',
   description: 'The Man, The Myth, The Legend - Juan',
   openGraph: {
