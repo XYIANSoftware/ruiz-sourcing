@@ -58,4 +58,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Ready for juan-ruiz.netlify.app** deployment
 
 ### Author
+- Kyle Dilbeck
+
+## [0.2.0] - 2024-12-19
+
+### Added
+- **Pure functional component architecture** for maximum reusability and maintainability
+- **Reusable component library** with 7 new components:
+  - `SocialLink`: Configurable social media links with platform-specific styling
+  - `HeroSection`: Flexible hero section with optional elements
+  - `InfoCard`: Reusable information cards with icons and content
+  - `HighlightItem`: Highlight items for expertise sections
+  - `PageHeader`: Consistent page headers across the application
+  - `WelcomeSection`: Welcoming content sections with icons
+  - `Button`: Enhanced button with shimmer effects and variants
+- **Beverage-themed mobile menu** with beer stein icon (pi pi-beer)
+- **Parallax background integration** using your custom background image
+- **Enhanced component props** with TypeScript interfaces for type safety
+- **Animation delay system** for staggered fade-in effects
+
+### Refactored
+- **Home page**: Now uses reusable `HeroSection` component
+- **About page**: Refactored to use `PageHeader`, `InfoCard`, and `HighlightItem` components
+- **Contact page**: Refactored to use `PageHeader`, `WelcomeSection`, and `SocialLink` components
+- **Navbar**: Updated mobile menu with beverage-themed beer stein icon
+- **Layout**: Integrated parallax background with your custom image
+
+### Component Benefits
+- **Single source of truth**: Changes to components automatically apply everywhere
+- **Consistent styling**: All instances maintain the same look and feel
+- **Easy maintenance**: Update one component, update everywhere
+- **Type safety**: Full TypeScript support with proper interfaces
+- **Reusability**: Components can be used across different pages and contexts
+- **Scalability**: Easy to add new features and variations
+
+### Technical Improvements
+- **Cleaner page code**: Pages are now much more readable and maintainable
+- **Better separation of concerns**: UI logic separated from page logic
+- **Enhanced barrel exports**: All components properly exported for easy imports
+- **Improved maintainability**: Future changes require minimal code updates
+- **Professional architecture**: Following React best practices for enterprise applications
+
+### Author
 - Kyle Dilbeck 
