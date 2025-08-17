@@ -83,9 +83,42 @@ export default function Navbar() {
     }
   ]
 
+  const CustomMenuIcon = () => (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Beer Foam-Colored Menu Bars */}
+      <rect x="10" y="12" width="24" height="3" rx="1.5" fill="#F6C867"/> {/* amber/foam */}
+      <rect x="10" y="22" width="24" height="3" rx="1.5" fill="#F6C867"/>
+      <rect x="10" y="32" width="24" height="3" rx="1.5" fill="#F6C867"/>
+
+      {/* Mini Beer Can Icon */}
+      <rect x="38" y="20" width="4" height="8" rx="1" fill="#D4A64F" stroke="#AA7B2B" strokeWidth="0.8"/>
+      <circle cx="40" cy="20" r="1" fill="#fff"/>
+
+      {/* Subtle Sparkle (optional aesthetic) */}
+      <circle cx="16" cy="8" r="1.2" fill="#fff" fillOpacity="0.6"/>
+      <circle cx="28" cy="38" r="1" fill="#fff" fillOpacity="0.3"/>
+    </svg>
+  )
+
   return (
     <>
-      <div className="sticky top-0 z-50">
+      {/* Mobile Menu Button - Custom SVG Icon - Fixed Positioning */}
+      <div className="md:hidden fixed top-8 right-8 z-50">
+        <button
+          className="p-4 rounded-full transition-all duration-300 hover:scale-110"
+          style={{
+            background: 'rgba(245, 158, 11, 0.1)',
+            border: '1px solid rgba(245, 158, 11, 0.3)',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+          }}
+          onClick={() => setMobileMenuVisible(true)}
+        >
+          <CustomMenuIcon />
+        </button>
+      </div>
+
+      {/* Desktop Navigation */}
+      <div className="sticky top-0 z-40">
         <Menubar
           model={items}
           start={start}
@@ -97,21 +130,6 @@ export default function Navbar() {
             borderBottom: '1px solid rgba(245, 158, 11, 0.2)'
           }}
         />
-        
-        {/* Mobile Menu Button - Beer Stein Icon - Properly Positioned */}
-        <div className="md:hidden fixed top-0 right-0 z-50 m-8 p-4">
-          <Button
-            icon="pi pi-beer"
-            className="p-button-text p-button-rounded p-button-lg"
-            style={{
-              background: 'rgba(245, 158, 11, 0.1)',
-              border: '1px solid rgba(245, 158, 11, 0.3)',
-              color: '#f59e0b',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
-            }}
-            onClick={() => setMobileMenuVisible(true)}
-          />
-        </div>
       </div>
 
       {/* Mobile Sidebar */}

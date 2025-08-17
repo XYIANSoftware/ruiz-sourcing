@@ -61,9 +61,10 @@ export default function HeroSection({
               <Image 
                 src={heroImage} 
                 alt={heroImageAlt}
-                width={300}
-                height={300}
-                className="mx-auto rounded-3xl shadow-2xl"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="mx-auto rounded-3xl shadow-2xl w-auto h-auto max-w-[300px] max-h-[400px]"
                 priority
                 style={{
                   border: '2px solid rgba(245, 158, 11, 0.2)',
@@ -105,7 +106,7 @@ export default function HeroSection({
           {/* Description */}
           {showDescription && description && (
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in animation-delay-600"
-               style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
+               style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)' }}>
               {description}
             </p>
           )}
