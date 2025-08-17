@@ -103,7 +103,7 @@ export default function Navbar() {
   return (
     <>
       {/* Mobile Menu Button - Custom SVG Icon - At Very Top-Right Edge */}
-      <div className="md:hidden fixed top-4 right-4 z-50">
+      <div className="md:hidden fixed z-50" style={{ top: '1rem', right: '1rem' }}>
         <button
           className="w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-gray-900"
           style={{
